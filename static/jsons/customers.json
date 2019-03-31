@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "customer": "/static/customers/kehu01.jpg"
+    },
+    {
+        "id": 2,
+        "customer": "/static/customers/kehu02.jpg"
+    },
+    {
+        "id": 3,
+        "customer": "/static/customers/kehu03.jpg"
+    },
+    {
+        "id": 4,
+        "customer": "/static/customers/kehu04.jpg"
+    },
+    {
+        "id": 5,
+        "customer": "/static/customers/kehu05.jpg"
+    },
+    {
+        "id": 6,
+        "customer": "/static/customers/kehu06.jpg"
+    },
+    {
+        "id": 7,
+        "customer": "/static/customers/kehu07.jpg"
+    },
+    {
+        "id": 8,
+        "customer": "/static/customers/kehu08.jpg"
+    }
+]

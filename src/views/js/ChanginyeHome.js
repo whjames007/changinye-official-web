@@ -16,7 +16,8 @@ export default {
         userAccount: 'aaa',
         userPassword: 'bbb'
       }, // 登录系统的账号和密码
-      bannerList: ['/static/bmw001.jpg','/static/bmw002.jpg','/static/bmw003.jpg','/static/bmw004.jpg','/static/bmw005.jpg'],
+      bannerList: ['/static/bmw001.jpg', '/static/bmw002.jpg', '/static/bmw003.jpg', '/static/bmw004.jpg', '/static/bmw005.jpg'],
+      customerList: [],
       aaa: null
     }
   }, mounted() {
@@ -25,6 +26,7 @@ export default {
     this.currentLanguage = langInfo.value
     this.loginForm.locale = langInfo.value
     this.localeFlag = langInfo.flag
+    this.getCust()
   },
   methods: {
     changeLanguage() {
@@ -48,6 +50,12 @@ export default {
     },
     handleSelect(key, keyPath) {
       console.log(key, keyPath)
+    },
+    getCust() {
+      console.info(`【获取客户信息】`)
+      this.axios.get('http://localhost:8080/static/jsons/customers.json', {}).then((response) => {
+        this.customerList = response.data
+      })
     }
   }
 }

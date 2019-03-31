@@ -10,12 +10,7 @@
             <div style="font-size:18px; padding: 15px;">{{$t('message.enterpriseName')}}</div>
           </el-col>
           <el-col :span="headerThree">
-            <el-menu
-              default-active="11"
-              class="el-menu-demo"
-              mode="horizontal"
-              @select="handleSelect"
-            >
+            <el-menu default-active="11" mode="horizontal" @select="handleSelect">
               <el-submenu index="11">
                 <template slot="title">产品介绍</template>
                 <el-menu-item index="2-1">选项1</el-menu-item>
@@ -72,6 +67,9 @@
       </el-header>
       <el-main>
         <div>
+        </div>
+
+        <div>
           <el-carousel height="760px" :interval="1000">
             <el-carousel-item v-for="item in bannerList" :key="item">
               <img :src="item">
@@ -79,6 +77,13 @@
           </el-carousel>
         </div>
         <div>{{$t('message.enterpriseName')}}</div>
+        <div>
+          <el-card class="box-card">
+            <div v-for="item in customerList" :key="item.id">
+              <img :src="item.customer">
+            </div>
+          </el-card>
+        </div>
       </el-main>
       <el-footer>Footer</el-footer>
     </el-container>
